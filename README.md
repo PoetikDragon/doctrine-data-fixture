@@ -17,9 +17,7 @@ this module uses a Service Manager configurable on a per-group basis.
 Releases
 --------
 
-The 4.x release tags support PHP 5.6 and 7.0.
-
-The 5.x release tags support PHP 7.1 and above.
+The 6.x release tags support PHP 7.2 and above.
 
 
 Installation
