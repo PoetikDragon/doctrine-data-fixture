@@ -1,10 +1,10 @@
 Doctrine Data Fixtures with Grouping for Laminas
 ================================================
 
-[![Build status](https://api.travis-ci.org/API-Skeletons/zf-doctrine-data-fixture.svg)](http://travis-ci.org/API-Skeletons/zf-doctrine-data-fixture)
+[![Build status](https://api.travis-ci.org/API-Skeletons/doctrine-data-fixture.svg)](http://travis-ci.org/API-Skeletons/doctrine-data-fixture)
 [![Gitter](https://badges.gitter.im/api-skeletons/open-source.svg)](https://gitter.im/api-skeletons/open-source)
 [![Patreon](https://img.shields.io/badge/patreon-donate-yellow.svg)](https://www.patreon.com/apiskeletons)
-[![Total Downloads](https://poser.pugx.org/API-Skeletons/zf-doctrine-data-fixture/downloads)](https://packagist.org/packages/API-Skeletons/zf-doctrine-data-fixture)
+[![Total Downloads](https://poser.pugx.org/API-Skeletons/doctrine-data-fixture/downloads)](https://packagist.org/packages/API-Skeletons/doctrine-data-fixture)
 
 
 This provides command line support for Doctrine Fixtures in Laminas.
@@ -29,7 +29,7 @@ Installation of this module uses composer. For composer documentation, please re
 [getcomposer.org](http://getcomposer.org/).
 
 ```sh
-$ composer require api-skeletons/zf-doctrine-data-fixture ^2.0
+$ composer require api-skeletons/doctrine-data-fixture ^2.0
 ```
 
 Add this module to your application's configuration:
@@ -41,9 +41,9 @@ Add this module to your application's configuration:
 ],
 ```
 
-> ### zf-component-installer
+> ### laminas-component-installer
 >
-> If you use [zf-component-installer](https://github.com/laminas/laminas-component-installer),
+> If you use [laminas-component-installer](https://github.com/laminas/laminas-component-installer),
 > that plugin will install doctrine-data-fixture as a module for you.
 
 
@@ -119,7 +119,7 @@ use ApiSkeletons\Doctrine\DataFixture\Loader;
 
 // Run audit fixtures
 $dataFixtureManager = $application->getServiceManager()
-    ->build('ApiSkeletons\Doctrine\DataFixture\DataFixtureManager', ['group' => 'zf-doctrine-audit']);
+    ->build('ApiSkeletons\Doctrine\DataFixture\DataFixtureManager', ['group' => 'group-name']);
 
 $loader = new Loader($dataFixtureManager);
 $purger = new ORMPurger();
