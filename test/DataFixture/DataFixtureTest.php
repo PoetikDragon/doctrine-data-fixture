@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ZFTest\Doctrine\DataFixture;
+namespace ApiSkeletonsTest\Doctrine\DataFixture;
 
 use Db\Entity;
 use Doctrine\Common\DataFixtures\Executor\ORMExecutor;

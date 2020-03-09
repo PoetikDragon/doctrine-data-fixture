@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Laminas\Doctrine\DataFixture\Commands;
+namespace ApiSkeletons\Doctrine\DataFixture\Commands;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Symfony\Component\Console\Input\InputInterface;

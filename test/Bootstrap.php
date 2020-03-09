@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ZFTest\Doctrine\DataFixture;
+namespace ApiSkeletonsTest\Doctrine\DataFixture;
 
 use Laminas\Loader\AutoloaderFactory;
 
@@ -47,7 +47,7 @@ class Bootstrap
             'Laminas\Loader\StandardAutoloader' => [
                 'autoregister_zf' => true,
                 'namespaces'      => [
-                    'ZFTest\Doctrine\DataFixture' => __DIR__ . '/../src',
+                    'ApiSkeletons\Doctrine\DataFixture' => __DIR__ . '/../src',
                     __NAMESPACE__                 => __DIR__,
                     'Test'                        => __DIR__ . '/../vendor/Test/',
                 ],
