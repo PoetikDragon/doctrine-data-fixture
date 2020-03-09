@@ -37,7 +37,7 @@ Add this module to your application's configuration:
 ```php
 'modules' => [
    ...
-   'Laminas\Doctrine\DataFixture',
+   'ApiSkeletons\Doctrine\DataFixture',
 ],
 ```
 
@@ -96,8 +96,7 @@ index.php data-fixture:import <group> [--purge-with-truncate] [--do-not-append]
 
 The `<group>` is required.
 
-The default was to not append and this was constantly overridden with --append.
-Append is now to the default option.  This is inversed with the new --do-not-append
+Append is the default option.  This is inversed with the new --do-not-append
 
 Options:
 
@@ -147,11 +146,4 @@ Important Notes
 * You can only run one group at a time from the command line.  If you need to run more create a script to run them in sequence.
 * The ServiceManager is injected into each DataFixtureManager at getServiceLocator() so you can use instantiators which run from that level.  This makes the DataFixtureManager work like a plugin manager defined with `$serviceListener->addServiceManager()`.
 * You cannot use abstract factories.  Each fixture must be individually configured.
-
-History
--------
-
-Version 1.0 of this module grouped groups by partial object manager alias.  This limited grouping of 3rd party fixtures and the flexibility of using ODM.
-
-This module is a near complete rewrite of [hounddog/doctrine-data-fixture-module](https://github.com/Hounddog/DoctrineDataFixtureModule).  All the patterns have changed and the code was reduced.  That module served me and the community well for a long time.
 
