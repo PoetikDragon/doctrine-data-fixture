@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ZFTest\Doctrine\DataFixture;
+namespace ApiSkeletonsTest\Doctrine\DataFixture;
 
 use Db\Entity;
 use Doctrine\Common\DataFixtures\Executor\ORMExecutor;
@@ -15,13 +15,13 @@ use Psr\Container\ContainerExceptionInterface;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Input\StringInput;
 use Symfony\Component\Console\Output\BufferedOutput;
-use Zend\Mvc\Service\ServiceManagerConfig;
-use Zend\ServiceManager\ServiceManager;
-use ZF\Doctrine\DataFixture\Commands\ImportCommand;
-use ZF\Doctrine\DataFixture\Commands\ListCommand;
-use ZF\Doctrine\DataFixture\DataFixtureManager;
-use ZF\Doctrine\DataFixture\DataFixtureManagerFactory;
-use ZF\Doctrine\DataFixture\Loader;
+use Laminas\Mvc\Service\ServiceManagerConfig;
+use Laminas\ServiceManager\ServiceManager;
+use ApiSkeletons\Doctrine\DataFixture\Commands\ImportCommand;
+use ApiSkeletons\Doctrine\DataFixture\Commands\ListCommand;
+use ApiSkeletons\Doctrine\DataFixture\DataFixtureManager;
+use ApiSkeletons\Doctrine\DataFixture\DataFixtureManagerFactory;
+use ApiSkeletons\Doctrine\DataFixture\Loader;
 
 class DataFixtureTest extends TestCase
 {

@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace ZF\Doctrine\DataFixture;
+namespace ApiSkeletons\Doctrine\DataFixture;
 
 use Symfony\Component\Console\Application;
-use Zend\EventManager\EventInterface;
-use Zend\Loader\StandardAutoloader;
-use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
-use Zend\ModuleManager\Feature\ConfigProviderInterface;
-use Zend\ModuleManager\Feature\InitProviderInterface;
-use Zend\ModuleManager\ModuleManagerInterface;
-use Zend\ServiceManager\ServiceManager;
-use ZF\Doctrine\DataFixture\Commands\ImportCommand;
-use ZF\Doctrine\DataFixture\Commands\ListCommand;
+use Laminas\EventManager\EventInterface;
+use Laminas\Loader\StandardAutoloader;
+use Laminas\ModuleManager\Feature\AutoloaderProviderInterface;
+use Laminas\ModuleManager\Feature\ConfigProviderInterface;
+use Laminas\ModuleManager\Feature\InitProviderInterface;
+use Laminas\ModuleManager\ModuleManagerInterface;
+use Laminas\ServiceManager\ServiceManager;
+use ApiSkeletons\Doctrine\DataFixture\Commands\ImportCommand;
+use ApiSkeletons\Doctrine\DataFixture\Commands\ListCommand;
 
 class Module implements
     AutoloaderProviderInterface,

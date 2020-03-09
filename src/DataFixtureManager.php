@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace ZF\Doctrine\DataFixture;
+namespace ApiSkeletons\Doctrine\DataFixture;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
 use DoctrineModule\Persistence\ProvidesObjectManager;
-use Zend\ServiceManager\AbstractPluginManager;
+use Laminas\ServiceManager\AbstractPluginManager;
 
 class DataFixtureManager extends AbstractPluginManager implements ObjectManagerAwareInterface
 {

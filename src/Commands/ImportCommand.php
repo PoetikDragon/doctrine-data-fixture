@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ZF\Doctrine\DataFixture\Commands;
+namespace ApiSkeletons\Doctrine\DataFixture\Commands;
 
 use Doctrine\Common\DataFixtures\Executor\ORMExecutor;
 use Doctrine\Common\DataFixtures\Purger\ORMPurger;
@@ -11,7 +11,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
-use ZF\Doctrine\DataFixture\Loader;
+use ApiSkeletons\Doctrine\DataFixture\Loader;
 
 class ImportCommand extends AbstractCommand
 {

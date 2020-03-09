@@ -2,8 +2,8 @@
 
 namespace General\Listener;
 
-use Zend\EventManager\Event;
-use Zend\EventManager\SharedEventManagerInterface;
+use Laminas\EventManager\Event;
+use Laminas\EventManager\SharedEventManagerInterface;
 
 /**
  * Class EventCatcher
@@ -12,7 +12,7 @@ use Zend\EventManager\SharedEventManagerInterface;
  */
 class EventCatcher
 {
-    const EVENT_IDENTIFIER = 'ZF\Apigility\Doctrine\DoctrineResource';
+    const EVENT_IDENTIFIER = 'Laminas\ApiTools\Doctrine\DoctrineResource';
 
     /**
      * @var array

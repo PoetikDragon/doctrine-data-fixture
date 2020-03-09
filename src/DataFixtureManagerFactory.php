@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace ZF\Doctrine\DataFixture;
+namespace ApiSkeletons\Doctrine\DataFixture;
 
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 
 class DataFixtureManagerFactory implements FactoryInterface
 {

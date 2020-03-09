@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Db\Fixture;
 
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 
 class DependencyFixtureFactory implements FactoryInterface
 {

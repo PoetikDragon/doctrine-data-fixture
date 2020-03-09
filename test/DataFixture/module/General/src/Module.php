@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace General;
 
 use General\Listener\EventCatcher;
-use Zend\EventManager\EventInterface;
-use Zend\ModuleManager\Feature\BootstrapListenerInterface;
-use ZF\Apigility\Provider\ApigilityProviderInterface;
+use Laminas\EventManager\EventInterface;
+use Laminas\ModuleManager\Feature\BootstrapListenerInterface;
+use Laminas\ApiTools\Provider\ApiToolsProviderInterface;
 
-class Module implements ApigilityProviderInterface, BootstrapListenerInterface
+class Module implements ApiToolsProviderInterface, BootstrapListenerInterface
 {
     /**
      * @inheritdoc
@@ -25,7 +25,7 @@ class Module implements ApigilityProviderInterface, BootstrapListenerInterface
     public function getAutoloaderConfig(): array
     {
         return [
-            'Zend\Loader\StandardAutoloader' => [
+            'Laminas\Loader\StandardAutoloader' => [
                 'namespaces' => [
                     __NAMESPACE__ => __DIR__,
                 ],

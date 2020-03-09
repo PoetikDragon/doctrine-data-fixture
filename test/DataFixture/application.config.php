@@ -3,28 +3,28 @@
 declare(strict_types=1);
 
 $modules = [
-    'Zend\Cache',
-    'Zend\Form',
-    'Zend\I18n',
+    'Laminas\Cache',
+    'Laminas\Form',
+    'Laminas\I18n',
 ];
-if (class_exists('Zend\Filter\Module')) {
-    $modules[] = 'Zend\Filter';
+if (class_exists('Laminas\Filter\Module')) {
+    $modules[] = 'Laminas\Filter';
 }
-if (class_exists('Zend\Hydrator')) {
-    $modules[] = 'Zend\Hydrator';
+if (class_exists('Laminas\Hydrator')) {
+    $modules[] = 'Laminas\Hydrator';
 }
-if (class_exists('Zend\InputFilter')) {
-    $modules[] = 'Zend\InputFilter';
+if (class_exists('Laminas\InputFilter')) {
+    $modules[] = 'Laminas\InputFilter';
 }
 
 $modules = array_merge($modules, [
-    'Zend\Paginator',
-    'Zend\Router',
-    'Zend\Validator',
+    'Laminas\Paginator',
+    'Laminas\Router',
+    'Laminas\Validator',
     'DoctrineModule',
     'DoctrineORMModule',
     'Db',
-    'ZF\Doctrine\DataFixture',
+    'ApiSkeletons\Doctrine\DataFixture',
 ]);
 
 return [
@@ -36,7 +36,7 @@ return [
         'module_paths'      => [
             __DIR__ . '/../vendor',
             'Db'                      => __DIR__ . '/module/Db/src',
-            'ZF\Doctrine\DataFixture' => __DIR__ . '/../..',
+            'ApiSkeletons\Doctrine\DataFixture' => __DIR__ . '/../..',
         ],
     ],
 ];
