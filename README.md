@@ -27,7 +27,7 @@ Installation of this module uses composer. For composer documentation, please re
 [getcomposer.org](http://getcomposer.org/).
 
 ```sh
-$ composer require api-skeletons/doctrine-data-fixture ^2.0
+$ composer require api-skeletons/doctrine-data-fixture
 ```
 
 Add this module to your application's configuration:
