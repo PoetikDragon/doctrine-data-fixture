@@ -1,5 +1,5 @@
-ZF Doctrine Data Fixture
-========================
+Doctrine Data Fixtures with Grouping for Laminas
+================================================
 
 [![Build status](https://api.travis-ci.org/API-Skeletons/zf-doctrine-data-fixture.svg)](http://travis-ci.org/API-Skeletons/zf-doctrine-data-fixture)
 [![Gitter](https://badges.gitter.im/api-skeletons/open-source.svg)](https://gitter.im/api-skeletons/open-source)
@@ -7,11 +7,11 @@ ZF Doctrine Data Fixture
 [![Total Downloads](https://poser.pugx.org/API-Skeletons/zf-doctrine-data-fixture/downloads)](https://packagist.org/packages/API-Skeletons/zf-doctrine-data-fixture)
 
 
-This provides command line support for Doctrine Fixtures in Zend Framework 2.
+This provides command line support for Doctrine Fixtures in Laminas.
 Often projects will have multiple sets of fixtures for different object managers or modules such as
 from a 3rd party API.  When this is the case a tool which can run fixtures in groups is needed.
 Additionally dependency injection must be available to the fixtures.  To accomplish these needs
-this module uses a Zend Service Manager configurable on a per-group basis.
+this module uses a Service Manager configurable on a per-group basis.
 
 
 Releases
@@ -37,14 +37,14 @@ Add this module to your application's configuration:
 ```php
 'modules' => [
    ...
-   'ZF\Doctrine\DataFixture',
+   'Laminas\Doctrine\DataFixture',
 ],
 ```
 
 > ### zf-component-installer
 >
-> If you use [zf-component-installer](https://github.com/zendframework/zf-component-installer),
-> that plugin will install zf-doctrine-data-fixture as a module for you.
+> If you use [zf-component-installer](https://github.com/laminas/laminas-component-installer),
+> that plugin will install doctrine-data-fixture as a module for you.
 
 
 Configuration
@@ -74,7 +74,7 @@ return [
 ];
 ```
 
-Each group is a [Zend ServiceManager](http://framework.zend.com/manual/current/en/in-depth-guide/services-and-servicemanager.html) configuration.  This allows complete dependency injection control of your fixtures.
+Each group is a [Laminas ServiceManager](https://docs.laminas.dev/laminas-servicemanager/) configuration.  This allows complete dependency injection control of your fixtures.
 
 
 Listing Fixtures
@@ -116,11 +116,11 @@ to the service manager then load the fixtures into the `Loader` manually.
 ```php
 use Doctrine\Common\DataFixtures\Executor\ORMExecutor;
 use Doctrine\Common\DataFixtures\Purger\ORMPurger;
-use ZF\Doctrine\DataFixture\Loader;
+use ApiSkeletons\Doctrine\DataFixture\Loader;
 
 // Run audit fixtures
 $dataFixtureManager = $application->getServiceManager()
-    ->build('ZF\Doctrine\DataFixture\DataFixtureManager', ['group' => 'zf-doctrine-audit']);
+    ->build('ApiSkeletons\Doctrine\DataFixture\DataFixtureManager', ['group' => 'zf-doctrine-audit']);
 
 $loader = new Loader($dataFixtureManager);
 $purger = new ORMPurger();

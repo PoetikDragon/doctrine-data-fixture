@@ -17,11 +17,11 @@ use Symfony\Component\Console\Input\StringInput;
 use Symfony\Component\Console\Output\BufferedOutput;
 use Laminas\Mvc\Service\ServiceManagerConfig;
 use Laminas\ServiceManager\ServiceManager;
-use ZF\Doctrine\DataFixture\Commands\ImportCommand;
-use ZF\Doctrine\DataFixture\Commands\ListCommand;
-use ZF\Doctrine\DataFixture\DataFixtureManager;
-use ZF\Doctrine\DataFixture\DataFixtureManagerFactory;
-use ZF\Doctrine\DataFixture\Loader;
+use ApiSkeletons\Doctrine\DataFixture\Commands\ImportCommand;
+use ApiSkeletons\Doctrine\DataFixture\Commands\ListCommand;
+use ApiSkeletons\Doctrine\DataFixture\DataFixtureManager;
+use ApiSkeletons\Doctrine\DataFixture\DataFixtureManagerFactory;
+use ApiSkeletons\Doctrine\DataFixture\Loader;
 
 class DataFixtureTest extends TestCase
 {

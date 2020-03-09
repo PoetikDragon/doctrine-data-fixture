@@ -8,7 +8,7 @@ use Db\Entity\Artist;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
-use ZF\Doctrine\DataFixture\Module;
+use ApiSkeletons\Doctrine\DataFixture\Module;
 
 class DependencyFixture extends AbstractFixture implements FixtureInterface
 {

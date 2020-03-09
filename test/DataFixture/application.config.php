@@ -24,7 +24,7 @@ $modules = array_merge($modules, [
     'DoctrineModule',
     'DoctrineORMModule',
     'Db',
-    'ZF\Doctrine\DataFixture',
+    'ApiSkeletons\Doctrine\DataFixture',
 ]);
 
 return [
@@ -36,7 +36,7 @@ return [
         'module_paths'      => [
             __DIR__ . '/../vendor',
             'Db'                      => __DIR__ . '/module/Db/src',
-            'ZF\Doctrine\DataFixture' => __DIR__ . '/../..',
+            'ApiSkeletons\Doctrine\DataFixture' => __DIR__ . '/../..',
         ],
     ],
 ];

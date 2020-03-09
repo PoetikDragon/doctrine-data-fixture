@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ZF\Doctrine\DataFixture;
+namespace ApiSkeletons\Doctrine\DataFixture;
 
 use Symfony\Component\Console\Application;
 use Laminas\EventManager\EventInterface;
@@ -12,8 +12,8 @@ use Laminas\ModuleManager\Feature\ConfigProviderInterface;
 use Laminas\ModuleManager\Feature\InitProviderInterface;
 use Laminas\ModuleManager\ModuleManagerInterface;
 use Laminas\ServiceManager\ServiceManager;
-use ZF\Doctrine\DataFixture\Commands\ImportCommand;
-use ZF\Doctrine\DataFixture\Commands\ListCommand;
+use ApiSkeletons\Doctrine\DataFixture\Commands\ImportCommand;
+use ApiSkeletons\Doctrine\DataFixture\Commands\ListCommand;
 
 class Module implements
     AutoloaderProviderInterface,

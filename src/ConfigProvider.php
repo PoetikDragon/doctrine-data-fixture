@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ZF\Doctrine\DataFixture;
+namespace ApiSkeletons\Doctrine\DataFixture;
 
 class ConfigProvider
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ZF\Doctrine\DataFixture\Commands;
+namespace ApiSkeletons\Doctrine\DataFixture\Commands;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -10,8 +10,8 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Laminas\ServiceManager\Exception\ServiceNotCreatedException;
 use Laminas\ServiceManager\ServiceLocatorInterface;
-use ZF\Doctrine\DataFixture\DataFixtureManager;
-use ZF\Doctrine\DataFixture\DataFixtureManagerFactory;
+use ApiSkeletons\Doctrine\DataFixture\DataFixtureManager;
+use ApiSkeletons\Doctrine\DataFixture\DataFixtureManagerFactory;
 
 abstract class AbstractCommand extends Command
 {
