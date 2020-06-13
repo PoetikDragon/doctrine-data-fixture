@@ -37,7 +37,7 @@ abstract class AbstractCommand extends Command
     /**
      * @inheritdoc
      */
-    protected function execute(InputInterface $input, OutputInterface $output): void
+    protected function execute(InputInterface $input, OutputInterface $output)
     {
         try {
             $this->executeCommand($input, $output);
@@ -45,6 +45,8 @@ abstract class AbstractCommand extends Command
             $interface = new SymfonyStyle($input, $output);
             $interface->error($exception->getPrevious()->getMessage());
         }
+
+        return 0;
     }
 
     /**
