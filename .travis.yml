@@ -23,4 +23,3 @@ script:
   - mkdir -p build/logs
   - ./vendor/bin/phpcs
   - ./vendor/bin/phpunit
-  - ./vendor/bin/phpstan analyze -c phpstan.neon --level=7 src/
