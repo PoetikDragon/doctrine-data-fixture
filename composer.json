@@ -23,7 +23,7 @@
         "laminas/laminas-modulemanager": "^2.7.2 || ^3.0.0",
         "laminas/laminas-eventmanager": "^3.0.0",
         "laminas/laminas-servicemanager": "^3.1.0",
-        "laminas/laminas-dependency-plugin": "^1.0"
+        "laminas/laminas-dependency-plugin": "^2.0"
     },
     "require-dev": {
         "api-skeletons/coding-standard": "^1.0.0",
