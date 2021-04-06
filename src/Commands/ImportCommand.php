@@ -15,7 +15,6 @@ use ApiSkeletons\Doctrine\DataFixture\Loader;
 
 class ImportCommand extends AbstractCommand
 {
-
     /**
      * @inheritdoc
      */
@@ -79,9 +78,10 @@ EOT
             return;
         }
 
-        $manager = $this->getDataFixtureManager($groupName);
-        $loader  = new Loader($manager);
-        $purger  = new ORMPurger;
+        $manager      = $this->getDataFixtureManager($groupName);
+        $loader       = new Loader($manager);
+        $purgerClass  = (isset($manager->getOptions()['purger'])) ? $manager->getOptions()['purger']: ORMPurger::class;
+        $purger = new $purgerClass();
 
         foreach ($manager->getAll() as $fixture) {
             $loader->addFixture($fixture);
@@ -100,7 +100,11 @@ EOT
             ));
         }
 
-        $executor = new ORMExecutor($objectManager, $purger);
+        $executorClass  = (isset($manager->getOptions()['executor'])) ?
+            $manager->getOptions()['executor']:
+            ORMExecutor::class;
+        $executor = new $executorClass($objectManager, $purger);
+
         $executor->execute($loader->getFixtures(), ! $input->getOption('do-not-append'));
         $interface = new SymfonyStyle($input, $output);
         $interface->success('Fixtures loaded!');

@@ -56,6 +56,8 @@ return [
         'fixture' => [
             'group1' => [
                 'object_manager' => 'doctrine.entitymanager.orm_default',
+                'executor' => Executor::class,
+                'purger' => Purger::class,
                 'invokables' => [
                     'ModuleName\Fixture\FixtureOne' => 'ModuleName\Fixture\FixtureOne',
                 ],
@@ -73,6 +75,8 @@ return [
 ```
 
 Each group is a [Laminas ServiceManager](https://docs.laminas.dev/laminas-servicemanager/) configuration.  This allows complete dependency injection control of your fixtures.
+
+The 'executor' and 'purger' keys are optional and allow for custom classes for these functions.  If omitted the Doctrine ORM classes will be used.
 
 
 Listing Fixtures

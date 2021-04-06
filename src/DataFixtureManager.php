@@ -7,6 +7,7 @@ namespace ApiSkeletons\Doctrine\DataFixture;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
 use DoctrineModule\Persistence\ProvidesObjectManager;
+use Interop\Container\ContainerInterface;
 use Laminas\ServiceManager\AbstractPluginManager;
 
 class DataFixtureManager extends AbstractPluginManager implements ObjectManagerAwareInterface
@@ -22,6 +23,23 @@ class DataFixtureManager extends AbstractPluginManager implements ObjectManagerA
      * @var string
      */
     protected $objectManagerAlias;
+
+    /**
+     * @var array
+     */
+    private $options = [];
+
+    public function __construct(ContainerInterface $container, array $config, $options = [])
+    {
+        parent::__construct($container, $config);
+
+        $this->options = $options;
+    }
+
+    public function getOptions(): array
+    {
+        return $this->options;
+    }
 
     /**
      * Get all data fixtures
