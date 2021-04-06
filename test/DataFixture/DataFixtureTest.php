@@ -8,7 +8,7 @@ use Db\Entity;
 use Doctrine\Common\DataFixtures\Executor\ORMExecutor;
 use Doctrine\Common\DataFixtures\Loader as DoctrineLoader;
 use Doctrine\Common\DataFixtures\Purger\ORMPurger;
-use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\Persistence\ObjectManager;
 use Doctrine\ORM\Tools\SchemaTool;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerExceptionInterface;
@@ -25,7 +25,6 @@ use ApiSkeletons\Doctrine\DataFixture\Loader;
 
 class DataFixtureTest extends TestCase
 {
-
     /**
      * @var ServiceManager
      */
@@ -237,7 +236,7 @@ class DataFixtureTest extends TestCase
         }
 
         /**
-         * @var EntityManagerInterface $objectManager
+         * @var ObjectManager $objectManager
          */
         $objectManager = $manager->getObjectManager();
         $executor      = new ORMExecutor($objectManager, $purger);

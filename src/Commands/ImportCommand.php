@@ -6,7 +6,7 @@ namespace ApiSkeletons\Doctrine\DataFixture\Commands;
 
 use Doctrine\Common\DataFixtures\Executor\ORMExecutor;
 use Doctrine\Common\DataFixtures\Purger\ORMPurger;
-use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\Persistence\ObjectManager;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -92,11 +92,11 @@ EOT
         }
 
         $objectManager = $manager->getObjectManager();
-        if (! $objectManager instanceof EntityManagerInterface) {
+        if (! $objectManager instanceof ObjectManager) {
             throw new \RuntimeException(sprintf(
                 'Invalid object manager given, %s must implement %s.',
                 get_class($objectManager),
-                EntityManagerInterface::class
+                ObjectManager::class
             ));
         }
 
