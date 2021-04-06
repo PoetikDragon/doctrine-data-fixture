@@ -9,7 +9,6 @@ use Laminas\ServiceManager\Factory\FactoryInterface;
 
 class DataFixtureManagerFactory implements FactoryInterface
 {
-
     const OPTION_GROUP = 'group';
 
     /**
@@ -26,11 +25,12 @@ class DataFixtureManagerFactory implements FactoryInterface
         $fixtureGroup       = $this->getFixtureGroup($options);
         $groupConfig        = $this->getGroupConfig($config, $fixtureGroup);
         $objectManagerAlias = $this->getObjectManagerAlias($groupConfig, $fixtureGroup);
+        $options            = $this->getOptions($groupConfig);
 
         /**
          * @var DataFixtureManager $instance
          */
-        $instance = new $requestedName($container, $groupConfig);
+        $instance = new $requestedName($container, $groupConfig, $options);
         $instance->setObjectManagerAlias($objectManagerAlias);
         $instance->setObjectManager($container->get($objectManagerAlias));
 
@@ -98,5 +98,16 @@ class DataFixtureManagerFactory implements FactoryInterface
         }
 
         return $objectManagerAlias;
+    }
+
+    /**
+     * Get any options configured with the fixture group
+     */
+    protected function getOptions(array $groupConfig)
+    {
+        $options = $groupConfig;
+        unset($options['factories']);
+
+        return $options;
     }
 }
